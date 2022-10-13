@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#check for file validity
+file="$1"
+if test -f "$file";then
+	if test -s "$file";then
+		echo "school file is not empty"
+	else
+		echo "school file is empty"
+	fi
+	test -f "$file"; status=$?
+	if [ $status = 0 ];then
+		echo "school file is a regular file"
+	else
+		echo ""
+	fi
+	echo "school file exists"
+else
+	echo "school file does not exist"
+fi
