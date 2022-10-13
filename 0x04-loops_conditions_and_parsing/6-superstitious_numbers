@@ -13,8 +13,10 @@ do
                 18)
                         echo "back luck from Italy"
                         ;;
+		*)
+			echo "$i"
+			;;
         esac
-        echo "$i"
         ((i++))
 done
 
