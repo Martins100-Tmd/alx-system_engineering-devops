@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Display Best School if the iteration is not the 4th and 8th
+k=0
+while [[ $k -lt 10 ]];
+do
+	if [[ $k = 7 ]]
+	then
+		echo "good luck"
+	elif [[ $k = 3 ]]
+	then
+		echo "bad luck"
+	else
+		echo "Best School"
+	fi
+	((k++))
+done
