@@ -2,19 +2,20 @@
 #check for file validity
 file="$1"
 if test -f "$file";then
-	test -s "$file"; gut=$?
-	if [ $gut = 0 ];then
-		echo "school file is not empty"
-	else
-		echo "school file is empty"
-	fi
 	echo "school file exists"
+	test -f "$file"; gut=$?
+	if [ $gut = 0 ];then
+		echo "school is not empty"
+	else
+		echo "school is empty"
+	fi
+	test -f "$file"; stat=$?
+	if [ $stat = 0 ];then
+		echo "school file is a regular file"
+	else
+		echo
+	fi
 else
 	echo "school file does not exist"
 fi
-test -f "$file"; status=$?
-if [ $status = 0 ];then
-	echo "school file is a regular file"
-else
-	echo ""
-fi
+
