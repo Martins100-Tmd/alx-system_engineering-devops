@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#print Bes school ten times with until loop
+i=0
+until [[ $i -eq 10 ]]
+do
+	echo "Best School"
+	((i++))
+done
