@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+#print filename after -
+for FILE in *;
+do
+	real=${FILE#*-}
+	echo "$real"
+done
