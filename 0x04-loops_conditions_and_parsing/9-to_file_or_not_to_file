@@ -2,7 +2,8 @@
 #check for file validity
 file="$1"
 if test -f "$file";then
-	if test -s "$file";then
+	test -s "$file"; gut=$?
+	if [ $gut = 0 ];then
 		echo "school file is not empty"
 	else
 		echo "school file is empty"
