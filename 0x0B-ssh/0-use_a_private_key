@@ -1,0 +1,4 @@
+#Bash Script to connect to server using the
+#Private key '~/.ssh/school' with user ubuntu
+
+ssh ubuntu@34.224.1.190 -i ~/.ssh/school
