@@ -1,10 +1,5 @@
-# config ssh config file
-$str = "Host 54.236.25.236
-        User ubuntu
-        IdentityFile ~/.ssh/school
-        IdentitiesOnly yes"
+# setup client SSH configuration
 
-file { '/home/vagrant/.ssh/config':
-  ensure  => 'present',
-  content => $str
+exec { 'echo "PasswordAuthentication no\nIdentityFile ~/.ssh/school" >> /etc/ssh/ssh_config':
+        path    => '/bin/'
 }
