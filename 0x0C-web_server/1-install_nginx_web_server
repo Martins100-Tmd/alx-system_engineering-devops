@@ -2,7 +2,7 @@
 #Install Nginx on server (web-01)
 
 sudo apt update
-sudo apt install nginx
+sudo apt install -y nginx
 ufw allow 'Nginx HTTP'
 sudo service nginx start
 sudo chown -R "$USER":"$USER" /var/www
